@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:insta_ui/Components/my_text_field.dart';
-import 'package:insta_ui/Services/chat/chat_service.dart';
+import 'package:insta_ui/Components/textfield.dart';
+import 'package:insta_ui/Services/chatting/chatting_service.dart';
 
 class ChatPage extends StatefulWidget {
 

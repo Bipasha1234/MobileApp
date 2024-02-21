@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:insta_ui/Services/auth/auth_service.dart';
 import 'package:provider/provider.dart';
 
-import 'chat_page.dart';
+import 'chatting_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key});

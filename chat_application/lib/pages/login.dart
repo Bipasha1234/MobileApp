@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:insta_ui/Components/my_button.dart';
-import 'package:insta_ui/Components/my_text_field.dart';
+import 'package:insta_ui/Components/button.dart';
+import 'package:insta_ui/Components/textfield.dart';
 import 'package:insta_ui/Services/auth/auth_service.dart';
 import 'package:provider/provider.dart';
 

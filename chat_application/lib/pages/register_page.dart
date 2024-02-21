@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../Components/my_button.dart';
-import '../Components/my_text_field.dart';
+import '../Components/button.dart';
+import '../Components/textfield.dart';
 import '../Services/auth/auth_service.dart';
 
 class RegisterPage extends StatefulWidget {
