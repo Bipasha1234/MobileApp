@@ -19,7 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final passwordController=TextEditingController();
   final confirmPasswordController=TextEditingController();
 
-  // sign up user
+  // signing - up user
   void signUp() async{
     if (passwordController.text!=confirmPasswordController.text){
       ScaffoldMessenger.of(context).showSnackBar(
@@ -29,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
       );
     return;
   }
-    //get auth service
+
     final authService=Provider.of<AuthService>(context,listen:false);
  try{
    await authService.signUpWithEmailandPassword(emailController.text, passwordController.text);
@@ -58,7 +58,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     color: Colors.grey[800],
                   ),
                   const SizedBox(height: 5),
-                  //register account
+                  //register the account
                   Text("Register your account now!",
                     style: TextStyle(
                       fontSize: 20,fontWeight: FontWeight.bold,
@@ -74,11 +74,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   //confirm password field
                   const SizedBox(height: 20),
                   MyTextField(controller: confirmPasswordController, hintText: 'confirmPassword', obscureText: true),
-                  //sign Up btn
+                  //sign - Up btn
                   const SizedBox(height: 20),
                   MyButton(onTap:signUp, text: "Sign Up"),
                   const SizedBox(height: 5),
-                  //not a mem, register now
+                  //already registered,login now
                    Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

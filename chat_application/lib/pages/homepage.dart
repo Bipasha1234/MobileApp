@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF075E54), // Green color similar to WhatsApp
+        backgroundColor: Color(0xFF075E54),
         title: Text('Home Page',),
 
         actions: [
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
             if (_auth.currentUser!.email != data['email']) {
               return ListTile(
                 leading: CircleAvatar(
-                  // You can replace this with user's image if available
+
                   child: Text(data['email'][0]),
                 ),
                 title: Text(

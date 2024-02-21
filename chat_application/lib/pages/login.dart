@@ -19,7 +19,7 @@ final emailController =TextEditingController();
 final passwordController=TextEditingController();
 
 void signIn()async{
-  //get the auth service
+  //getting the auth service
   final authService=Provider.of<AuthService>(context,listen:false);
 
   try{
@@ -48,7 +48,7 @@ void signIn()async{
                   color: Colors.grey[800],
                 ),
                 const SizedBox(height: 5),
-                //welcome back messages
+
                   Text("Welcome to Chatting app!",
                     style: TextStyle(
                       fontSize: 20,fontWeight: FontWeight.bold,
@@ -64,11 +64,11 @@ void signIn()async{
                 //password textfield
                 const SizedBox(height: 30),
                 MyTextField(controller: passwordController, hintText: 'Password', obscureText: true),
-                //sign in btn
+                //sign - in btn
                 const SizedBox(height: 30),
                 MyButton(onTap:signIn, text: "Sign In"),
                 const SizedBox(height: 10),
-                //not a mem, register now
+                //not registered, register now
                  Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

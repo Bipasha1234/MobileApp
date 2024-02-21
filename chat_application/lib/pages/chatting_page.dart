@@ -20,10 +20,10 @@ class _ChatPageState extends State<ChatPage> {
   final FirebaseAuth _firebaseAuth=FirebaseAuth.instance;
 
   void sendMessage()async{
-    //only send message if there is something to send
+    // send message if it is not empty
     if(_messageController.text.isNotEmpty){
       await _chatService.sendMessage(widget.receiverUserID, _messageController.text);
-      //clear the text controller after sending the messages
+      //clearing the textafter sending the msgs
       _messageController.clear();
     }
   }
@@ -34,7 +34,7 @@ class _ChatPageState extends State<ChatPage> {
       backgroundColor: Color(0xFFE5F5F3),
       body:Column(
         children:[
-          //messages
+          //msgs
           Expanded(child: _buildMessageList(),
           ),
           //user input
@@ -44,7 +44,8 @@ class _ChatPageState extends State<ChatPage> {
       ),
     );
   }
-  //build message list
+
+
   Widget _buildMessageList() {
     return StreamBuilder(
       stream: _chatService.getMessages(
@@ -64,11 +65,12 @@ class _ChatPageState extends State<ChatPage> {
       },
     );
   }
-//build message item
+
+
 Widget _buildMessageItem(DocumentSnapshot document){
     Map<String,dynamic>data=document.data() as Map<String,dynamic>;
 
-    //align the msg to right if sender is current user, else to left
+    // the msg to right if sender is the current user, else to left
     bool isMe = data['senderId'] == _firebaseAuth.currentUser!.uid;
 
     return Align(
@@ -94,7 +96,8 @@ Widget _buildMessageItem(DocumentSnapshot document){
       ),
     );
 }
-//build msg input
+
+
 Widget _buildMessageInput(){
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
